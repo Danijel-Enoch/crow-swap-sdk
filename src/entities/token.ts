@@ -76,10 +76,18 @@ export const WETH = {
   ),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
-    '0xaE8E19eFB41e7b96815649A6a60785e1fbA84C1e',
+    '0xf9a7A2b01Bf758776703677719F8aCf018600070',
     18,
     'WBNB',
     'Wrapped BNB',
     'https://www.binance.org'
+  ),
+  [ChainId.CRONOSTESTNET]: new Token(
+    ChainId.CRONOSTESTNET,
+    '0xDd7FBd7e655DE4B8eccb2B3254F6B69B569F0A9a',
+    18,
+    'WCRO',
+    'Wrapped CRO',
+    'https://cronos.crypto.org'
   )
 }
