@@ -23,6 +23,7 @@ var _SOLIDITY_TYPE_MAXIMA;
   ChainId[ChainId["MAINNET"] = 56] = "MAINNET";
   ChainId[ChainId["TESTNET"] = 97] = "TESTNET";
   ChainId[ChainId["CRONOSTESTNET"] = 338] = "CRONOSTESTNET";
+  ChainId[ChainId["CRONOS"] = 25] = "CRONOS";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
@@ -437,7 +438,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.TESTNET] = /*#__PURE__*/new Token(exports.ChainId.TESTNET, '0xf9a7A2b01Bf758776703677719F8aCf018600070', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.CRONOSTESTNET] = /*#__PURE__*/new Token(exports.ChainId.CRONOSTESTNET, '0xDd7FBd7e655DE4B8eccb2B3254F6B69B569F0A9a', 18, 'WCRO', 'Wrapped CRO', 'https://cronos.crypto.org'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.TESTNET] = /*#__PURE__*/new Token(exports.ChainId.TESTNET, '0xf9a7A2b01Bf758776703677719F8aCf018600070', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.CRONOSTESTNET] = /*#__PURE__*/new Token(exports.ChainId.CRONOSTESTNET, '0xDd7FBd7e655DE4B8eccb2B3254F6B69B569F0A9a', 18, 'WCRO', 'Wrapped CRO', 'https://cronos.crypto.org'), _WETH[exports.ChainId.CRONOS] = /*#__PURE__*/new Token(exports.ChainId.CRONOS, '0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23', 18, 'WCRO', 'Wrapped CRO', 'https://cronos.crypto.org'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
