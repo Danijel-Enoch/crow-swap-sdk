@@ -20,10 +20,7 @@ var IPancakePair = _interopDefault(require('@pancakeswap-libs/pancake-swap-core/
 var _SOLIDITY_TYPE_MAXIMA;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 56] = "MAINNET";
-  ChainId[ChainId["TESTNET"] = 97] = "TESTNET";
-  ChainId[ChainId["CRONOSTESTNET"] = 338] = "CRONOSTESTNET";
-  ChainId[ChainId["CRONOS"] = 25] = "CRONOS";
+  ChainId[ChainId["CORE_TESTNET"] = 1115] = "CORE_TESTNET";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
@@ -36,6 +33,18 @@ var _SOLIDITY_TYPE_MAXIMA;
   Rounding[Rounding["ROUND_HALF_UP"] = 1] = "ROUND_HALF_UP";
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(exports.Rounding || (exports.Rounding = {}));
+/**
+ * factory:0x31E8C3fBE55978716E552d5F45D5B21c69B4A187
+ * basicERC:0x0fEF6aA6363bA525C2eCf6331CB783A439B6e6e7
+ * anotherbasic:0x61e6E51FD1c1E1ED13A8C51C39e9f746c2FD5d15
+ *router:0xaC884abd83cf05E94ecd8431065aCAf89E8033cF
+
+ BEP20:0xf5a60E1A21677433301B3cF554936A0EE91Cbf71
+ masterChef:0xb5F3Ea331D3975FF405554e996F1d2c5EF4B8c1B
+ sousChef:0x91521d7f9C3897dc64BC7e045A86c97b1Cb925D6
+ mutlicall:0xDb302AB81e2d34B7665EFAFd4A46f43b5558A640
+ */
+
 
 var FACTORY_ADDRESS = '0xDc0e504Ca2b90fA08a7d45Ff6F08d7ce33DDcc9d';
 var INIT_CODE_HASH = '0x4b79ce49ed81fea5264e35c2533dee5fcdd6a2261e78da994c40facc823dc396';
@@ -438,7 +447,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.TESTNET] = /*#__PURE__*/new Token(exports.ChainId.TESTNET, '0xf9a7A2b01Bf758776703677719F8aCf018600070', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.CRONOSTESTNET] = /*#__PURE__*/new Token(exports.ChainId.CRONOSTESTNET, '0xDd7FBd7e655DE4B8eccb2B3254F6B69B569F0A9a', 18, 'WCRO', 'Wrapped CRO', 'https://cronos.crypto.org'), _WETH[exports.ChainId.CRONOS] = /*#__PURE__*/new Token(exports.ChainId.CRONOS, '0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23', 18, 'WCRO', 'Wrapped CRO', 'https://cronos.crypto.org'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.CORE_TESTNET] = /*#__PURE__*/new Token(exports.ChainId.CORE_TESTNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
