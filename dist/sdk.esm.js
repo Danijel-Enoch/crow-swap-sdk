@@ -10,13 +10,15 @@ import { keccak256, pack } from '@ethersproject/solidity';
 import { Contract } from '@ethersproject/contracts';
 import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider } from '@ethersproject/providers';
-import IPancakePair from '@pancakeswap-libs/pancake-swap-core/build/IPancakePair.json';
+import IPancakePair from '@uniswap/v2-core/build/IUniswapV2Pair.json';
 
 var _SOLIDITY_TYPE_MAXIMA;
 var ChainId;
 
 (function (ChainId) {
-  ChainId[ChainId["CORE_TESTNET"] = 1115] = "CORE_TESTNET";
+  ChainId[ChainId["MAINNET"] = 1115] = "MAINNET";
+  ChainId[ChainId["BSCTESTNET"] = 97] = "BSCTESTNET";
+  ChainId[ChainId["BSCNET"] = 56] = "BSCNET";
 })(ChainId || (ChainId = {}));
 
 var TradeType;
@@ -33,21 +35,9 @@ var Rounding;
   Rounding[Rounding["ROUND_HALF_UP"] = 1] = "ROUND_HALF_UP";
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
-/**
- * factory:0x31E8C3fBE55978716E552d5F45D5B21c69B4A187
- * basicERC:0x0fEF6aA6363bA525C2eCf6331CB783A439B6e6e7
- * anotherbasic:0x61e6E51FD1c1E1ED13A8C51C39e9f746c2FD5d15
- *router:0xaC884abd83cf05E94ecd8431065aCAf89E8033cF
 
- BEP20:0xf5a60E1A21677433301B3cF554936A0EE91Cbf71
- masterChef:0xb5F3Ea331D3975FF405554e996F1d2c5EF4B8c1B
- sousChef:0x91521d7f9C3897dc64BC7e045A86c97b1Cb925D6
- mutlicall:0xDb302AB81e2d34B7665EFAFd4A46f43b5558A640
- */
-
-
-var FACTORY_ADDRESS = '0xDc0e504Ca2b90fA08a7d45Ff6F08d7ce33DDcc9d';
-var INIT_CODE_HASH = '0x4b79ce49ed81fea5264e35c2533dee5fcdd6a2261e78da994c40facc823dc396';
+var FACTORY_ADDRESS = '0xC53c56F17e4472f521e6BE1718653f5a9Dd37FeB';
+var INIT_CODE_HASH = '0xa173d5f3a31b62872e83a8f626c463f745500c262d3337c19f42d67ce5c00824';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -447,7 +437,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.CORE_TESTNET] = /*#__PURE__*/new Token(ChainId.CORE_TESTNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0x9EF7Be58225b072B177f477eC63dd8803cC13CD0', 18, 'WCORE', 'Wrapped CORE', 'https://www.binance.org'), _WETH[ChainId.BSCTESTNET] = /*#__PURE__*/new Token(ChainId.BSCTESTNET, '0x9EF7Be58225b072B177f477eC63dd8803cC13CD0', 18, 'WCORE', 'Wrapped CORE', 'https://www.binance.org'), _WETH[ChainId.BSCNET] = /*#__PURE__*/new Token(ChainId.BSCNET, '0x9EF7Be58225b072B177f477eC63dd8803cC13CD0', 18, 'WCORE', 'Wrapped CORE', 'https://www.binance.org'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
